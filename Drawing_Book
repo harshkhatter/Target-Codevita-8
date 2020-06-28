@@ -1,0 +1,40 @@
+#https://www.hackerrank.com/challenges/drawing-book/
+
+#!/bin/python3
+
+import os
+import sys
+
+#
+# Complete the pageCount function below.
+#
+def pageCount(n, p):
+    #function with two parameters n and p 
+    # 'n' is total no. of pages in a book
+    # 'p' is the target page number
+    
+    # Get the number of page turns to last page
+    tn = n//2   # get quotient 
+    ts = p//2   # read 'p' page from staring 
+    te = tn - ts# read 'p' page from end of the book 
+
+    # find the minimum turns for either side
+    return min(ts,te)
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    # number of pages in a book 'n'
+    n = int(input())
+
+    # the target page number to turn to 'p'
+    p = int(input())
+
+    # call a function with two arguments 'n' & 'p'
+    result = pageCount(n, p)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
+#https://www.hackerrank.com/challenges/drawing-book/

@@ -1,0 +1,31 @@
+# https://www.hackerrank.com/challenges/extra-long-factorials/problem
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the extraLongFactorials function below.
+def extraLongFactorials(n):
+    # in python, int has unlimited scope,
+    # so No extra efforts required
+    #initailly, take 'fact' = 1
+    fact=1
+
+    # apply a while loop till n>1
+    while n>1:
+        fact=fact*n
+        n=n-1
+
+    # function is not  returning anything, so print fact
+    print(fact)
+    
+if __name__ == '__main__':
+    n = int(input())
+
+    extraLongFactorials(n)
+
+# https://www.hackerrank.com/challenges/extra-long-factorials/problem
